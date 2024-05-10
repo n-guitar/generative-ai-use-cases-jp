@@ -102,6 +102,7 @@ export class Rag extends Construct {
         autoDeleteObjects: true,
         removalPolicy: RemovalPolicy.DESTROY,
         objectOwnership: s3.ObjectOwnership.OBJECT_WRITER,
+        serverAccessLogsBucket: dataSourceBucket,
         serverAccessLogsPrefix: 'logs',
         enforceSSL: true,
       });
